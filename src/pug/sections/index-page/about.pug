@@ -1,0 +1,15 @@
+include ../../mixins/info-card
+include ../../content/about-cards
+
+section.lw-section.lw-about
+  .lw-container
+    .lw-about__grid
+      .lw-about__grid-section.lw-about__grid-section--preview
+        img(src="./assets/img/about-img.jpg" alt="«Биовестин» первый в России жидкий пробиотик" width="568" height="358")
+      .lw-about__grid-section.lw-about__grid-section--content
+        h2 «Биовестин» первый в России жидкий пробиотик
+        p «Биовестин» — это жидкие пробиотики для поддержания высокого качества здоровья и долголетия от резидента Биотехнопарка «Кольцово» и Технопарка Новосибирского Академгородка»
+
+      each item of arr
+        .lw-about__grid-section
+          +info-card(item)

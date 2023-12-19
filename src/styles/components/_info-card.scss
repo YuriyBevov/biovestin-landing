@@ -1,0 +1,28 @@
+.lw-info-card {
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px 20px;
+  min-height: 180px;
+  border-radius: 2px;
+  border: 1px solid #B7E979;
+  background-color: #F8F8F8;
+
+  &__title {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: font-weight 0.1s linear;
+
+    &:hover {
+      font-weight: 700;
+    }
+  }
+
+  &__link {
+    color: #333;
+    font-size: 12px;
+    // font-weight: 300;
+    margin-top: auto;
+  }
+}

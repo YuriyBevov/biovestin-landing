@@ -1,0 +1,26 @@
+//- data: {
+//-   imgPath: Image,
+//-   imgWidth: String,
+//-   imgHeight: String,
+//-   title: String,
+//-   text: String,
+//-   linkUrl: String,
+//-   linkTitle: String,
+//-   linkIcon: Boolean,
+//-   linkPosition: String
+//- }
+
+mixin info-card(data)
+  .lw-info-card
+
+    if data.img
+      img(src= data.imgPath alt= data.title width= data.imgWidth height= data.imgHeight)
+
+    if data.title
+      span.lw-info-card__title!= data.title
+
+    if data.text
+      span.lw-info-card__text!= data.text
+
+    if data.linkUrl
+      a( href= data.linkUrl class= data.linkPosition = 'right' ? 'lw-info-card__iconed lw-info-card__iconed--right' : null ).lw-info-card__link!= data.linkTitle
