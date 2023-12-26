@@ -1,5 +1,14 @@
 :root {
   --white: #ffffff;
+  --black: #000000;
 
+  --gray: #f8f8f8;
+
+  --basic-green: #b7e979;
+  --success: var(--basic-green);
+  --info-card-bg: var(--gray);
+  --light-color: #555555;
+
+  --main-text-color: #333333;
   --main-bg-color: var(--white);
 }

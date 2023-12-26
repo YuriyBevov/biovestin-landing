@@ -1,28 +1,47 @@
 .lw-info-card {
   display: flex;
   flex-direction: column;
-
   padding: 30px 20px;
+  height: auto;
+  height: 100%;
   min-height: 180px;
-  border-radius: 2px;
-  border: 1px solid #B7E979;
-  background-color: #F8F8F8;
+  transition: background-color var(--main-transition);
 
-  &__title {
-    color: #333;
-    font-size: 16px;
-    font-weight: 500;
-    transition: font-weight 0.1s linear;
+  &:hover {
+    background-color: var(--success);
 
-    &:hover {
-      font-weight: 700;
+    .lw-base-text {
+      // font-weight: 700;
+    }
+
+    .lw-secondary-text {
+      // font-weight: 700;
+
+      svg {
+        fill: var(--main-text-color);
+      }
     }
   }
 
-  &__link {
-    color: #333;
-    font-size: 12px;
-    // font-weight: 300;
+  border-radius: 2px;
+  border: 1px solid var(--success);
+  background-color: var(--info-card-bg);
+
+  .lw-base-text {
+    // transition: font-weight var(--main-transition);
+  }
+
+  .lw-secondary-text {
     margin-top: auto;
+    padding-top: 20px;
+    // transition: font-weight var(--main-transition);
+
+    svg {
+      width: 10px;
+      height: 10px;
+      fill: var(--success);
+      margin-left: 5px;
+      transition: fill var(--main-transition);
+    }
   }
 }
