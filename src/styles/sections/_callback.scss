@@ -1,0 +1,86 @@
+.lw-callback {
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 430px auto;
+    grid-gap: 20px;
+
+    padding: 50px 30px;
+    background-image: url("../assets/img/callback-bg.png");
+    background-size: cover;
+    background-position: center;
+
+    @media(max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media(max-width: 768px) {
+      grid-template-columns: 1fr;
+      padding: 40px 20px;
+    }
+
+    @media(max-width: 534px) {
+      padding: 30px 10px;
+    }
+  }
+
+  &__content {
+
+    @media(max-width: 768px) {
+      padding: 0 40px;
+      margin: 0 auto;
+    }
+
+    @media(max-width: 360px) {
+      padding: 0 10px;
+    }
+
+    .lw-base-title {
+      color: var(--white);
+
+      @media(max-width: 768px) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    &-info-line {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      svg {
+        width: 100%;
+        max-width: 18px;
+        height: 18px;
+        margin-right: 10px;
+        fill: var(--white);
+      }
+    }
+
+    small {
+      padding-left: 28px;
+    }
+  }
+
+  &__side {
+    display: flex;
+    gap: 20px;
+
+    @media(max-width: 768px) {
+      justify-content: center;
+    }
+
+    a {
+      height: fit-content;
+      margin-top: auto;
+
+      &:first-child {
+        margin-left: auto;
+        @media(max-width: 768px) {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

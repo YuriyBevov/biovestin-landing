@@ -1,0 +1,34 @@
+include ../../mixins/main-btn
+
+section.lw-section.lw-callback
+  .lw-container
+    .lw-callback__wrapper
+      .lw-callback__content
+        h2.lw-base-title Остались вопросы?
+
+        .lw-callback__content-info-line
+          svg(width="18" height="18")
+            use(xlink:href="./assets/sprite.svg#icon-clock")
+          span.lw-secondary-text.lw-secondary-text--white.lw-text-thin Ежедневно с 5 до 18 по Москве
+
+        .lw-callback__content-info-line
+          svg(width="18" height="18")
+            use(xlink:href="./assets/sprite.svg#icon-phone")
+          span.lw-secondary-text.lw-secondary-text--white Позвоните на горячую линию или напишите на почту, и получите бесплатную консультацию врача
+
+        small.lw-secondary-text.lw-secondary-text--white.lw-text-thin *  Звонок по РФ беcплатный!
+
+      .lw-callback__side
+        +main-btn({
+          type: 'link',
+          text: 'Позвонить',
+          href: 'tel:+78005003343',
+        })
+
+        +main-btn({
+          type: 'link',
+          text: 'Написать',
+          href: 'mailto:mail@biovesta.ru',
+          cls:  'lw-main-btn--secondary'
+        })
+

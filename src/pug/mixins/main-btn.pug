@@ -1,2 +1,12 @@
 mixin main-btn(data)
- button(type="button") button
+
+  if data.type == 'link'
+    a( href= data.href class= data.cls ? data.cls : null).lw-main-btn!= data.text
+
+  if data.type == 'button'
+    button(type="button" ).lw-main-btn!= data.text
+
+  if data.type == 'advLink'
+    a( href= data.href).lw-main-btn.lw-main-btn--secondary
+      img(src=`../assets/img/${data.logo}.png` alt= data.name width="160" height="50")
+

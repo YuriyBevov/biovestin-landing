@@ -1,0 +1,42 @@
+.lw-info-section {
+  min-height: 550px;
+  padding: 100px 0;
+  background-size: cover;
+  background-position: center;
+
+  &--top {
+    background-image: url("../assets/img/info-section-bg-1.jpg");
+  }
+
+  &--bottom {
+    background-image: url("../assets/img/info-section-bg-2.jpg");
+
+    .lw-info-section__content {
+      margin-left: auto;
+    }
+  }
+
+  &__content {
+    outline: 1px solid red;
+    @extend .flex-column;
+    max-width: 50%;
+
+    .lw-secondary-text {
+      margin-bottom: 30px;
+    }
+
+    .button-row:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    .lw-base-text {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.button-row {
+  @extend .flex-wrap;
+  align-items: center;
+  gap: 20px;
+}

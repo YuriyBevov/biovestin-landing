@@ -1,0 +1,43 @@
+include ./main-btn
+
+mixin info-section(data)
+  section.lw-section.lw-info-section(class= `lw-info-section--${data.type}`)
+    .lw-container
+      .lw-info-section__content
+        h2.lw-base-title.lw-base-title--white Где купить?
+
+        span.lw-secondary-text.lw-secondary-text--white.lw-text-thin Нажмите на кнопку «Заказать» и заполните форму ниже, чтобы приобрести «Биовестин» и «Биовестин-Лакто»
+
+        .button-row
+          +main-btn({
+            type: 'button',
+            text: 'Заказать',
+          })
+
+          +main-btn({
+            type: 'link',
+            text: 'Магазины в вашем городе',
+            href: 'https://biovestin.ru/gde_kupit/',
+            cls:  'lw-main-btn--outlined'
+          })
+
+        span.lw-base-text.lw-base-text--white А также здесь:
+
+        .button-row
+          +main-btn({
+            type: 'advLink',
+            name: 'Еаптека',
+            logo: 'eapteka',
+            href: 'https://www.eapteka.ru/goods/drugs/gasroenterology/dysbacteriosis/biovestin_bio_vesta/',
+          })
+
+          +main-btn({
+            type: 'advLink',
+            name: 'Био-веста',
+            logo: 'biovesta-logo',
+            href: 'https://vestamilk.ru/',
+          })
+
+
+
+
