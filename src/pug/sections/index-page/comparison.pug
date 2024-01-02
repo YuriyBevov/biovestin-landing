@@ -1,0 +1,40 @@
+section.lw-section.lw-comparison
+  .lw-container
+    //- img(src="./assets/img/banner-img-mobile.jpg" alt="Почему жидкий «Биовестин»,а не сухой пробиотик?" width="1160" height="500").lw-comparison__banner
+
+    picture.lw-comparison__banner
+      source(media="(max-width: 660px)" srcset="./assets/img/banner-img-mobile.jpg" type="image/jpg" width="330" height="990")
+      img(src="./assets/img/banner-img.jpg" alt="Почему жидкий «Биовестин»,а не сухой пробиотик?" width="1160" height="500")
+
+    .lw-comparison__content
+      .lw-comparison__content-side.lw-comparison__content-side--left
+        h2.lw-base-title  Сравнение активности бифидобактерий
+
+        .lw-comparison__item
+          span.lw-comparison__item-title Сухие:
+          p.lw-secondary-text Сухим бактериям требуются до 6-8 часов для активации, что не эффективно при частом стуле. При сушке бактерии впадают в глубокий анабиоз, из которого восстановиться могут только через 3-5 делений после попадания в благоприятную среду. В кишечнике среда часто неблагоприятная – это антибиотики, другие лекарства, также бактерии-конкуренты за питание. Не менее 8-10 часов в идеальной среде требуется сухим бактериям для перехода к активному состоянию. За это время они успевают выйти со стулом, так и не начав действовать
+
+        .lw-comparison__item
+          span.lw-comparison__item-title Жидкие:
+          p.lw-secondary-text В отличие от сухих, в жидких пробиотиках бактерии постоянно находятся в активном состоянии. Главное достоинство жидких пробиотиков заключается в том, что бактерии в них находятся в живой биологически активной форме. Свое благотворное воздействие они оказывают незамедлительно — сразу после приема препарата, что выгодно отличает жидкие пробиотики от аналогичных сухих препаратов
+
+      .lw-comparison__content-side.lw-comparison__content-side--right
+        .lw-comparison__item
+          small.lw-base-text Сухие бактерии
+          .lw-comparison__item-mobile-desc
+            img(src="./assets/img/clock-img.svg" alt="48 часов" width="40" height="40")
+            span спустя <b>48 часов</b>
+          img(src="./assets/img/comp_1.png" alt="Сухие бактерии" width="148" height="226")
+          span.lw-comparison__item-desc.lw-base-text <b>1 млн</b> колоний
+
+        .lw-comparison__item
+          img(src="./assets/img/clock-img.svg" alt="48 часов" width="120" height="120")
+          strong 48 часов
+
+        .lw-comparison__item
+          small.lw-base-text Жидкие бактерии
+          .lw-comparison__item-mobile-desc
+            img(src="./assets/img/clock-img.svg" alt="48 часов" width="40" height="40")
+            span спустя <b>48 часов</b>
+          img(src="./assets/img/comp_2.png" alt="Жидкие бактерии" width="148" height="226")
+          span.lw-comparison__item-desc.lw-base-text <b>1000 млн</b> колоний
