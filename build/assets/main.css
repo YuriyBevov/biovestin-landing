@@ -358,6 +358,7 @@ template {
   --white: #ffffff;
   --black: #000000;
   --gray: #f8f8f8;
+  --gray-2: #f1f5f9;
   --basic-green: #b7e979;
   --success: var(--basic-green);
   --info-card-bg: var(--gray);
@@ -366,6 +367,7 @@ template {
   --lightgreen: #b7e979;
   --main-text-color: #333333;
   --main-bg-color: var(--white);
+  --gray-bg-color: var(--gray-2);
 }
 
 :root {
@@ -474,7 +476,7 @@ a {
   flex-wrap: wrap;
 }
 
-.flex-centered-content, .lw-main-btn {
+.flex-centered-content, .lw-product-card__tags span, .lw-main-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -486,7 +488,7 @@ a {
   justify-content: center;
 }
 
-.flex-column, .lw-comparison__item, .lw-info-section__content {
+.flex-column, .lw-comparison__item, .lw-info-section__content, .lw-product-card__offer, .lw-product-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -514,7 +516,7 @@ a {
 }
 
 /*resets*/
-.list-reset, .lw-about__bottom-content ul {
+.list-reset, .lw-about__bottom-content ul, .lw-product-card__chars {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -721,6 +723,202 @@ a {
   -webkit-transition: fill var(--main-transition);
   -o-transition: fill var(--main-transition);
   transition: fill var(--main-transition);
+}
+
+.lw-product-card {
+  padding: 20px;
+  background-color: var(--white);
+}
+@media (max-width: 1080px) {
+  .lw-product-card {
+    max-width: 480px;
+  }
+}
+@media (max-width: 534px) {
+  .lw-product-card {
+    padding: 20px 10px;
+  }
+}
+.lw-product-card__tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.lw-product-card__tags span {
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: 2px;
+  border: 1px solid var(--success);
+}
+.lw-product-card__title {
+  margin: auto 0 20px;
+}
+@media (max-width: 1080px) {
+  .lw-product-card__title {
+    text-align: center;
+    margin: 0 0 5px;
+  }
+}
+.lw-product-card__offer {
+  position: relative;
+  gap: 10px;
+  margin-bottom: 40px;
+  padding-right: 65%;
+}
+@media (max-width: 1080px) {
+  .lw-product-card__offer {
+    padding-right: 0;
+    margin-bottom: 5px;
+    margin-top: auto;
+  }
+}
+.lw-product-card__offer-img {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  width: 65%;
+}
+@media (max-width: 1080px) {
+  .lw-product-card__offer-img {
+    position: static;
+    top: 0;
+    width: 100%;
+  }
+}
+.lw-product-card__offer .lw-main-btn {
+  height: 32px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 5px 10px;
+  border: none;
+  max-width: 156px;
+}
+@media (max-width: 1080px) {
+  .lw-product-card__offer--top .lw-main-btn {
+    display: none;
+  }
+}
+.lw-product-card__offer--bottom {
+  margin-top: 30px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 20px;
+}
+.lw-product-card__offer--bottom .lw-main-btn {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+@media (min-width: 1081px) {
+  .lw-product-card__offer--bottom {
+    display: none;
+  }
+}
+.lw-product-card__offer-link.lw-main-btn {
+  border: 1px solid var(--green);
+  color: var(--main-text-color);
+}
+.lw-product-card__chars-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.lw-product-card__chars-item:not(:last-child) {
+  margin-bottom: 12px;
+}
+.lw-product-card__chars-item-icon {
+  margin-right: 10px;
+}
+.lw-product-card__chars-item-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+.lw-product-card__chars-item-name {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 6px;
+  max-width: 300px;
+  color: var(--main-text-color);
+}
+@media (max-width: 1080px) {
+  .lw-product-card__chars-item-name {
+    margin-right: 12px;
+  }
+}
+.lw-product-card__chars-item-value {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--main-text-color);
+}
+.lw-product-card__chars-item-rate {
+  position: relative;
+  position: relative;
+  width: 30px;
+  height: 18px;
+  background-color: var(--white);
+  z-index: 2;
+}
+.lw-product-card__chars-item-rate-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.lw-product-card__chars-item-rate-wrapper::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  height: 1px;
+  content: "";
+  background-color: #e7e8ea;
+}
+@media (max-width: 1080px) {
+  .lw-product-card__chars-item-rate-wrapper::before {
+    display: none;
+  }
+}
+.lw-product-card__chars-item-rate::before {
+  position: absolute;
+  top: 0;
+  left: 6px;
+  width: 18px;
+  height: 18px;
+  content: "";
+  border-radius: 50%;
+  background-color: #e7e8ea;
+}
+.lw-product-card__chars-item-rate--checked::before {
+  background-image: url("../assets/img/rate-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /* Секции */
@@ -1072,6 +1270,38 @@ a {
   }
 }
 
+.lw-product {
+  padding: 60px 0;
+  background-color: var(--gray-bg-color);
+}
+.lw-product__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+@media (max-width: 768px) {
+  .lw-product__grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+.lw-product .lw-base-title {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  margin-bottom: 6px;
+}
+
 .lw-callback {
   padding: 120px 0 60px;
 }
@@ -1169,6 +1399,11 @@ a {
   .lw-callback__side a:first-child {
     margin: 0;
   }
+}
+
+.lw-company {
+  padding: 60px 0;
+  background-color: var(--gray-bg-color);
 }
 
 /* Модальные окна */

@@ -8,12 +8,14 @@
 @import "common";
 
 /* Компоненты */
-
 @import "./components/info-card";
+@import "./components/product-card";
 /* Секции */
 
 @import "./sections/about";
 @import "./sections/info-section";
 @import "./sections/comparison";
+@import "./sections/product";
 @import "./sections/callback";
+@import "./sections/company";
 /* Модальные окна */

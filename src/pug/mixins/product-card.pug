@@ -1,0 +1,77 @@
+//- data: {
+//-   tags: Array[String] ,
+//-   title: String,
+//-   instuctionLink: String,
+//-   imgName: String,
+//-   chars: [
+//-     {
+//-       icon: String,
+//-       name: String,
+//-       value: String,
+//-       rate: [{
+//-          checked: Boolean
+//-       }]
+//-     }
+//-   ]
+//- }
+
+include ./main-btn
+
+mixin product-card(data)
+  .lw-product-card
+    if data.tags
+      .lw-product-card__tags
+        each tag of data.tags
+          span.lw-smaller-text!= tag
+
+    h3.lw-product-card__title!= data.title
+
+    .lw-product-card__offer.lw-product-card__offer--top
+      img(src=`./assets/img/${data.imgName}.png` alt!=data.title width="341" height="173").lw-product-card__offer-img
+
+      +main-btn({
+        type:"link",
+        text: 'Инструкция',
+        href: data.instructionLink,
+        cls: 'lw-main-btn--outlined lw-product-card__offer-link'
+      })
+
+      +main-btn({
+        type:"button",
+        text: 'Заказать'
+      })
+
+    ul.lw-product-card__chars
+      each item in data.chars
+        .lw-product-card__chars-item
+          img(src=`./assets/img/${item.icon}-icon.svg` alt!=item.name width="18" height="18").lw-product-card__chars-item-icon
+
+          .lw-product-card__chars-item-content
+            b.lw-product-card__chars-item-name!= item.name
+            if item.value
+              span.lw-product-card__chars-item-value!= item.value
+            if item.rate
+              .lw-product-card__chars-item-rate-wrapper
+                each rate in item.rate
+                  .lw-product-card__chars-item-rate(class= rate.checked ? 'lw-product-card__chars-item-rate--checked' : '')
+
+    .lw-product-card__offer.lw-product-card__offer--bottom
+      +main-btn({
+        type:"link",
+        text: 'Инструкция',
+        href: data.instructionLink,
+        cls: 'lw-main-btn--outlined lw-product-card__offer-link'
+      })
+
+      +main-btn({
+        type:"button",
+        text: 'Заказать'
+      })
+
+
+
+
+
+
+
+

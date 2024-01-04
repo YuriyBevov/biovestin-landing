@@ -1,7 +1,7 @@
 mixin main-btn(data)
 
   if data.type == 'link'
-    a( href= data.href class= data.cls ? data.cls : null).lw-main-btn!= data.text
+    a( href= data.href class= data.cls ? data.cls : null ).lw-main-btn!= data.text
 
   if data.type == 'button'
     button(type="button" ).lw-main-btn!= data.text

@@ -1,0 +1,103 @@
+include ../../mixins/product-card
+section.lw-section.lw-product
+  .lw-container
+    .lw-product__grid
+      h2.lw-base-title Выбери свой БИОВЕСТИН
+
+      +product-card({
+        tags: ['После курса антибиотиков','После приема “Биовестин-Лакто”'],
+        title: 'Живые бифидобактерии',
+        instructionLink: 'https://biovestin.ru/upload/instruction_biovestin.pdf',
+        imgName: 'biovestin-img',
+        chars: [
+          {
+            icon: 'calendar',
+            name: 'Курс:',
+            value: '4-6 недель',
+          },
+          {
+            icon: 'child',
+            name: 'Детям:',
+            value: 'с рождения',
+          },
+          {
+            icon: 'restore',
+            name: 'Восстанавливающий эффект',
+            rate: [
+              {
+                checked: true
+              },
+              {
+                checked: true
+              },
+              {
+                checked: true
+              },
+            ]
+          },
+          {
+            icon: 'shield',
+            name: 'Устойчивость к антибиотикам 1-го поколения',
+            rate: [
+              {
+                checked: true
+              },
+              {
+                checked: false
+              },
+              {
+                checked: false
+              },
+            ]
+          },
+        ]
+      })
+
+      +product-card({
+        tags: ['В начале курса антибиотиков','Перед приемом “Биовестин”'],
+        title: 'Живые бифидо- и лактобактерии',
+        instructionLink: 'https://biovestin.ru/upload/instruction_biovestin_lacto.pdf',
+        imgName: 'biovestinlakto-img',
+        chars: [
+          {
+            icon: 'calendar',
+            name: 'Курс:',
+            value: '2-4 недели',
+          },
+          {
+            icon: 'child',
+            name: 'Детям:',
+            value: 'старше 12 месяцев или по указанию врача',
+          },
+          {
+            icon: 'restore',
+            name: 'Восстанавливающий эффект',
+            rate: [
+              {
+                checked: true
+              },
+              {
+                checked: true
+              },
+              {
+                checked: true
+              },
+            ]
+          },
+          {
+            icon: 'shield',
+            name: 'Устойчивость к антибиотикам 1-го поколения',
+            rate: [
+              {
+                checked: true
+              },
+              {
+                checked: true
+              },
+              {
+                checked: true
+              },
+            ]
+          },
+        ]
+      })
