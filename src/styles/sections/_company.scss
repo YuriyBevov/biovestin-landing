@@ -1,4 +1,90 @@
 .lw-company {
   padding: 60px 0;
   background-color: var(--gray-bg-color);
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin-bottom: 15px;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
+
+    &-content {
+      @extend .flex-column;
+      padding-right: 20px;
+
+      .lw-base-title {
+        margin-bottom: 30px;
+
+        @media (max-width: 1024px) {
+          text-align: center;
+        }
+      }
+
+      .lw-base-text {
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0;
+        margin-bottom: 10px;
+
+        @media (max-width: 1024px) {
+          text-align: center;
+        }
+      }
+    }
+
+    &-gallery {
+      .swiper {
+        padding-bottom: 35px;
+
+        &-slide {
+          border-radius: 2px;
+          overflow: hidden;
+
+          img {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+
+    @media (max-width: 960px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .lw-activity-card {
+      .lw-base-text {
+        min-height: 40px;
+
+        @media (max-width: 960px) {
+          min-height: initial;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .lw-activity__title {
+      grid-column: 1/5;
+      font-weight: 700;
+
+      @media (max-width: 1024px) {
+        text-align: center;
+      }
+    }
+
+    .lw-activity-card:first-of-type {
+      grid-column: 1/3;
+    }
+  }
 }

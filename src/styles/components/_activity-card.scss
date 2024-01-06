@@ -1,0 +1,16 @@
+.lw-activity-card {
+  @extend .flex-column;
+  padding: 20px;
+  border-radius: 2px;
+  background-color: var(--basic-green);
+
+  .lw-base-text {
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  .lw-smaller-text {
+    margin-bottom: auto;
+  }
+}

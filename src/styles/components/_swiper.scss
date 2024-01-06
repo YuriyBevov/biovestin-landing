@@ -1,0 +1,12 @@
+.swiper-pagination {
+  &-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: var(--success);
+    opacity: 1;
+
+    &-active {
+      background-color: var(--main-text-color);
+    }
+  }
+}
