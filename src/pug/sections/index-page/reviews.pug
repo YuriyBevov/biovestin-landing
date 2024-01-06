@@ -1,0 +1,58 @@
+include ../../mixins/review-card
+
+section.lw-section.lw-reviews
+  .lw-container.lw-reviews__container
+    .lw-reviews__section.lw-reviews__section--preview
+      h2.lw-base-title Ваши отзывы нас вдохновляют
+
+      img(src="./assets/img/reviews-img.png" alt="Ваши отзывы нас вдохновляют" width="372" height="330")
+
+      .lw-reviews-slider-controls
+        .swiper-button-prev
+          svg(width="34" height="10")
+            use(xlink:href="./assets/sprite.svg#icon-slider-arr")
+        .swiper-button-next
+          svg(width="34" height="10")
+            use(xlink:href="./assets/sprite.svg#icon-slider-arr")
+
+    .lw-reviews__section.lw-reviews__section--content
+      .lw-reviews__tags
+        a(href="https://yandex.ru/sprav/chain/10900940/branches").lw-smaller-text Яндекс
+        a(href="https://otzovik.com/reviews/bad_bio-vesta_biovestin_zhivie_bifidobakterii/").lw-smaller-text Отзовик
+        a(href="https://irecommend.ru/content/lakto-i-bifido-bakterii-zao-bio-vesta-novosibirsk-biovestin-i-biovestin-lakto").lw-smaller-text irecommend.ru
+        a(href="https://irecommend.ru/content/lakto-i-bifido-bakterii-zao-bio-vesta-novosibirsk-biovestin-i-biovestin-lakto").lw-smaller-text flamp.ru
+
+      .lw-reviews__slider
+        .swiper
+          .swiper-wrapper
+            .swiper-slide
+              +review-card({
+                author: 'Жанна',
+                logo: './assets/img/eapteka.png',
+                content: 'Великолепный пробиотик! Открыла его для себя два года назад. Периодически пью курсами, ни простуд, ни проблем с пищеварением больше нет. Жизненные силы - на высоте. Приятно, что именно в России производят такую качественную продукцию'
+              })
+            .swiper-slide
+              +review-card({
+                author: 'Ирина Андреевна',
+                logo: './assets/img/eapteka.png',
+                content: 'Биовестин и биовестин-лакто покупаю достаточно давно. С помощью него вылечили у сына жуткий атопический дерматит (корками было покрыто почти все тело и никакие противоаллергенные диеты не помогали) в итоге я махнула рукой на диеты, мы стали есть все что ели и просто добавила в рацион биовестин (нам в свое время в больнице его после курса антибиотиков давали, вот и вспомнила про него) Так вот все прошло и больше не появлялось, едим все, диет никаких не соблюдаем и никакой аллергии у нас больше нет, теперь детям курсами периодически даю'
+              })
+            .swiper-slide
+              +review-card({
+                author: 'Ксения',
+                logo: './assets/img/eapteka.png',
+                content: 'Прекрасный препарат. У сына была дисфункция всего ЖКТ. Пропили всего 1 месяц и сразу резко снизились острые боли в области живота'
+              })
+            .swiper-slide
+              +review-card({
+                author: 'Виртанен Ирина',
+                logo: './assets/img/eapteka.png',
+                content: 'Очень понравилось средство. После двух курсов антибиотиков быстро восстановился жкт. Был белый язык и расстройство сильное. Расстройство прошло уже через сутки. Язык пришёл в норму примерно за неделю. Решила купить ещё пачку пропить для закрепления эффекта'
+              })
+            .swiper-slide
+              +review-card({
+                author: 'Елизавета',
+                logo: './assets/img/eapteka.png',
+                content: 'Легкий и удобный прием. В отличие от многих других живых добавок не такой противный на вкус. Только курс приема должен быть долгим, чтобы эффект был ощутим'
+              })
+

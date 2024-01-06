@@ -1,0 +1,8 @@
+mixin review-card(data)
+  .lw-review-card
+    .lw-review-card__header
+      .lw-review-card__user
+        img(src="./assets/img/user-icon.svg" alt=data.author width="30" height="30").lw-review-card__user-icon
+        span.lw-base-text.lw-review-card__user-name!= data.author
+      img(src= data.logo alt= data.author width="100" height="32")
+    .lw-smaller-text!= data.content

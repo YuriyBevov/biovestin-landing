@@ -13,7 +13,6 @@ __webpack_require__.r(__webpack_exports__);
 
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination]);
 var companySlider = document.querySelector(".lw-company__top-gallery .swiper");
-console.log(companySlider);
 
 if (companySlider) {
   new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](companySlider, {
@@ -22,6 +21,19 @@ if (companySlider) {
     pagination: {
       el: ".lw-company__top-gallery .swiper-pagination",
       dynamicBullets: true
+    }
+  });
+}
+
+var reviewsSlider = document.querySelector(".lw-reviews__slider .swiper");
+
+if (reviewsSlider) {
+  new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](reviewsSlider, {
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".lw-reviews-slider-controls .swiper-button-next",
+      prevEl: ".lw-reviews-slider-controls .swiper-button-prev"
     }
   });
 }

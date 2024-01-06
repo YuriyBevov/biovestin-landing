@@ -1,0 +1,58 @@
+.lw-review-card {
+  padding: 20px;
+  width: auto;
+  height: 100%;
+  max-width: 370px;
+  border-radius: 2px;
+  border: 1px solid var(--basic-green);
+  background: var(--gray);
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 534px) {
+    padding: 15px;
+  }
+
+  &__header {
+    @extend .flex-wrap;
+    align-items: center;
+    margin-bottom: 20px;
+
+    & > img {
+      @media (max-width: 360px) {
+        max-width: 80px;
+      }
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+
+    &-icon {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+
+      @media (max-width: 360px) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &-name {
+      margin-right: 20px;
+
+      @media (max-width: 534px) {
+        font-size: 14px;
+      }
+
+      @media (max-width: 360px) {
+        font-size: 12px;
+      }
+    }
+  }
+}

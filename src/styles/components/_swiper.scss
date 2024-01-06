@@ -10,3 +10,52 @@
     }
   }
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  @extend .flex-centered-content;
+  position: static;
+  width: 100%;
+  max-width: 66px;
+  height: fit-content;
+  min-height: 32px;
+  padding: 10px;
+  border-radius: 2px;
+  border: 1px solid var(--white);
+
+  transition: background-color var(--main-transition) border
+    var(--main-transition);
+
+  @media (max-width: 768px) {
+    border-color: var(--basic-green);
+    max-width: 100%;
+  }
+
+  svg {
+    fill: var(--white);
+    transition: fill var(--main-transition);
+
+    @media (max-width: 768px) {
+      fill: var(--main-text-color);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    border-color: var(--basic-green);
+    background-color: var(--basic-green);
+
+    svg {
+      fill: var(--main-text-color);
+    }
+  }
+}
+
+.swiper-button-prev svg {
+  transform: rotate(180deg);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
