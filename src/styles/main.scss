@@ -7,7 +7,10 @@
 @import "extends";
 @import "common";
 
+@import "./layout/footer";
+
 /* Компоненты */
+@import "./components/main-logo";
 @import "./components/info-card";
 @import "./components/product-card";
 @import "./components/activity-card";
@@ -16,6 +19,7 @@
 
 @import "./sections/about";
 @import "./sections/info-section";
+@import "./sections/features";
 @import "./sections/comparison";
 @import "./sections/product";
 @import "./sections/callback";
