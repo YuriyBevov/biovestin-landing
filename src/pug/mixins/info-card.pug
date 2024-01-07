@@ -12,17 +12,18 @@
 
 mixin info-card(data)
   a(href="index.html").lw-info-card
-    //if data.img
-      img(src= data.imgPath alt= data.title width= data.imgWidth height= data.imgHeight)
+    if data.imgPath
+      img(src= data.imgPath alt= data.title width="274" height="162")
 
-    if data.title
-      span.lw-base-text!= data.title
+    .lw-info-card__content
+      if data.title
+        span.lw-base-text!= data.title
 
-    //if data.text
-      span!= data.text
+      if data.text
+        span.lw-smaller-text!= data.text
 
-    if data.linkUrl
-      span(class= data.linkPosition = 'right' ? 'lw-info-card__more--pos-right' : null ).lw-secondary-text!= data.linkTitle
-        svg(width="10" height="10")
-          use(xlink:href="./assets/sprite.svg#icon-arrow")
+      if data.linkUrl
+        span.lw-secondary-text.lw-info-card__more!= data.linkTitle
+          svg(width="10" height="10")
+            use(xlink:href="./assets/sprite.svg#icon-arrow")
 

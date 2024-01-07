@@ -1,5 +1,5 @@
 .lw-features {
-  padding-top: 60px;
+  padding-top: 120px;
   background-image: url("../assets/img/features-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,6 +8,10 @@
   @media (max-width: 1024px) {
     background-image: url("../assets/img/features-bg-mobile.png");
     background-position: bottom;
+  }
+
+  @media (max-width: 534px) {
+    padding-top: 60px;
   }
 
   &__container {

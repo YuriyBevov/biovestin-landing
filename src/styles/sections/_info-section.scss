@@ -4,12 +4,37 @@
   background-size: cover;
   background-position: center;
 
+  @media (max-width: 1140px) {
+    padding: 20px 0 0;
+    background-position: bottom;
+
+    .lw-container {
+      min-height: 1200px;
+
+      @media (max-width: 768px) {
+        min-height: 1000px;
+      }
+
+      @media (max-width: 620px) {
+        min-height: 800px;
+      }
+    }
+  }
+
   &--top {
     background-image: url("../assets/img/info-section-bg-1.jpg");
+
+    @media (max-width: 1140px) {
+      background-image: url("../assets/img/info-section-bg-mobile-1.jpg");
+    }
   }
 
   &--bottom {
     background-image: url("../assets/img/info-section-bg-2.jpg");
+
+    @media (max-width: 1140px) {
+      background-image: url("../assets/img/info-section-bg-mobile-2.jpg");
+    }
 
     .lw-info-section__content {
       margin-left: auto;
@@ -17,12 +42,31 @@
   }
 
   &__content {
-    outline: 1px solid red;
     @extend .flex-column;
     max-width: 50%;
 
+    @media (max-width: 1140px) {
+      max-width: 100%;
+      min-height: inherit;
+      transform: translateY(50px);
+    }
+
+    @media (max-width: 534px) {
+      transform: translateY(30px);
+    }
+
+    .lw-base-title {
+      @media (max-width: 1140px) {
+        text-align: center;
+      }
+    }
+
     .lw-secondary-text {
       margin-bottom: 30px;
+
+      @media (max-width: 1140px) {
+        text-align: center;
+      }
     }
 
     .button-row:not(:last-child) {
@@ -31,6 +75,11 @@
 
     .lw-base-text {
       margin-bottom: 30px;
+
+      @media (max-width: 1140px) {
+        margin-top: auto;
+        text-align: center;
+      }
     }
   }
 }
@@ -39,4 +88,40 @@
   @extend .flex-wrap;
   align-items: center;
   gap: 20px;
+
+  .lw-main-btn {
+    width: calc(50% - 10px);
+    max-width: 50%;
+    min-width: 260px;
+
+    @media (max-width: 620px) {
+      width: 100%;
+      max-width: 100%;
+
+      &.lw-adv-link {
+        min-width: initial;
+      }
+    }
+  }
+
+  .lw-adv-link {
+    min-height: 100px;
+
+    @media (max-width: 1140px) {
+      border: 1px solid var(--basic-green);
+    }
+
+    @media (max-width: 620px) {
+      width: calc(50% - 10px);
+      min-width: initial;
+    }
+
+    @media (max-width: 534px) {
+      min-height: 60px;
+
+      img {
+        width: 100px;
+      }
+    }
+  }
 }

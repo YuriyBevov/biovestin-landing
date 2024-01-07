@@ -38,6 +38,19 @@ if (reviewsSlider) {
   });
 }
 
+var pressSlider = document.querySelector(".lw-press .swiper");
+
+if (pressSlider) {
+  new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](pressSlider, {
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    pagination: {
+      el: ".lw-company__top-gallery .swiper-pagination",
+      dynamicBullets: true
+    }
+  });
+}
+
 /***/ }),
 
 /***/ "./node_modules/dom7/dom7.esm.js":

@@ -1,0 +1,43 @@
+include ../../mixins/info-card
+
+section.lw-section.lw-press
+  .lw-container
+    h2.lw-base-title Пресса о нас
+
+    .swiper
+      .swiper-wrapper
+        .swiper-slide
+          +info-card({
+            imgPath: './assets/img/press-img-1.jpg',
+
+            linkUrl: 'https://ngs.ru/text/gorod/2022/07/26/71507966/#card_1',
+            linkTitle: 'Подробнее',
+            title: 'Сделано в Сибири:',
+            text: 'эликсир, который продают по всей России и даже в Болгарии и Китае'
+          })
+        .swiper-slide
+          +info-card({
+            imgPath: './assets/img/press-img-2.jpg',
+
+            linkUrl: 'https://www.eapteka.ru/kaliningrad/landing/biovestin/',
+            linkTitle: 'Подробнее',
+            title: 'Бифидобактерии можно капать в нос::',
+            text: 'эффективный способ укрепления иммунитета у детей'
+          })
+        .swiper-slide
+          +info-card({
+            imgPath: './assets/img/press-img-3.jpg',
+
+            linkUrl: 'https://newsib.net/specproekty/sobytiya-goda-2022/bio-vesta-gotovitsya-k-pyatikratnomu-rostu-proizvodstva.html',
+            linkTitle: 'Подробнее',
+            title: '«Био-Веста» готовится к пятикратному росту производства',
+          })
+        .swiper-slide
+          +info-card({
+            imgPath: './assets/img/press-img-4.jpg',
+
+            linkUrl: 'https://ngs.ru/text/gorod/2022/06/29/71444441/',
+            linkTitle: 'Подробнее',
+            title: 'Маст-хэв:',
+            text: 'этот продукт должен быть в каждом холодильнике'
+          })
