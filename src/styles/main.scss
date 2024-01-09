@@ -7,10 +7,12 @@
 @import "extends";
 @import "common";
 
+@import "./layout/header";
 @import "./layout/footer";
 
 /* Компоненты */
 @import "./components/main-logo";
+@import "./components/main-nav";
 @import "./components/info-card";
 @import "./components/product-card";
 @import "./components/activity-card";

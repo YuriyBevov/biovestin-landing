@@ -1,0 +1,141 @@
+.lw-header {
+  .lw-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .lw-main-logo {
+    max-width: 130px;
+    min-width: 130px;
+  }
+
+  &__top {
+    position: relative;
+    padding: 15px 0;
+    background-color: var(--danger);
+
+    @media (max-width: 960px) {
+      .lw-container {
+        flex-direction: column;
+      }
+    }
+
+    &-info {
+      margin-right: auto;
+      padding-left: 0;
+      font-weight: 300;
+
+      @media (max-width: 960px) {
+        margin-right: 0;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+    }
+
+    &-phone {
+      font-weight: 500;
+      @media (max-width: 960px) {
+        font-weight: 300;
+      }
+      b {
+        font-weight: 500;
+      }
+    }
+
+    &-worktime {
+      font-weight: 300;
+      b {
+        font-weight: 500;
+      }
+    }
+
+    &-closer {
+      position: absolute;
+      top: 16px;
+      right: 15px;
+      display: none;
+      @extend .btn-reset;
+      @extend .flex-centered-content;
+
+      svg {
+        fill: var(--white);
+      }
+
+      @media (max-width: 960px) {
+        display: flex;
+      }
+    }
+
+    .lw-smaller-text {
+      display: block;
+      padding: 0 5px;
+      text-align: center;
+      color: var(--white);
+    }
+  }
+
+  &__bottom {
+    padding: 15px 0;
+  }
+
+  &__callback {
+    max-width: 166px;
+    font-size: 16px;
+    font-weight: 500;
+
+    svg {
+      display: none;
+      fill: var(--white);
+    }
+
+    @media (max-width: 1280px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 67px;
+      height: 40px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+      border: none;
+      background: linear-gradient(91deg, #f9ad2e 0%, #f28700 100%);
+
+      span {
+        display: none;
+      }
+
+      svg {
+        display: block;
+      }
+    }
+
+    @media (max-width: 1140px) {
+      margin-left: auto;
+      margin-right: 30px;
+    }
+    @media (max-width: 440px) {
+      margin: 0 auto;
+    }
+  }
+}
+
+.lw-burger {
+  display: none;
+  @extend .btn-reset;
+  @extend .flex-centered-content;
+  flex-direction: column;
+  width: 40px;
+  height: 40px;
+
+  span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    margin: 3px 0;
+    background-color: black;
+  }
+
+  @media (max-width: 1140px) {
+    display: flex;
+  }
+}

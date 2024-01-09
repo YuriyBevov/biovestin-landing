@@ -94,6 +94,10 @@
     max-width: 50%;
     min-width: 260px;
 
+    &:first-child {
+      font-weight: 700;
+    }
+
     @media (max-width: 620px) {
       width: 100%;
       max-width: 100%;

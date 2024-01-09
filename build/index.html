@@ -11,8 +11,40 @@
     <script defer="defer" src="./assets/bundle.js"></script>
   </head>
   <body>
-    <header>
-      <p>headerd</p>
+    <header class="lw-header">
+      <div class="lw-header__top">
+        <div class="lw-container"><span class="lw-smaller-text lw-header__top-info">Официальный сайт производителя</span><span class="lw-smaller-text lw-header__top-phone">Консультация врача: <b>+ 7 (800) 500-33-43<b>,</span><span class="lw-smaller-text lw-header__top-worktime">ежедневно с 5:00 до 20:00 Мск. <b>Звонок бесплатный</b></span>
+          <button class="lw-header__top-closer">
+            <svg width="12" height="12">
+              <use xlink:href="./assets/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="lw-header__bottom">
+        <div class="lw-container"><a class="lw-main-logo" href="#"><img src="./assets/img/logo.svg" alt="Биовестин" width="250" height="70"></a>
+          <nav class="lw-main-nav">
+            <ul class="lw-main-nav__list">
+              <li class="lw-main-nav__list-item"><a href="#">Биовестин</a></li>
+              <li class="lw-main-nav__list-item"><a href="#">О пробиотиках</a></li>
+              <li class="lw-main-nav__list-item"><a href="#">Где купить</a></li>
+              <li class="lw-main-nav__list-item"><a href="#">Отзывы</a></li>
+              <li class="lw-main-nav__list-item"><a href="#">О производителе</a></li>
+              <li class="lw-main-nav__list-item"><a href="#">Пресса</a></li>
+              <li class="lw-main-nav__list-item"><a href="#">Контакты</a></li>
+            </ul>
+            <button class="lw-main-nav__closer" type="button">
+              <svg width="20" height="20">
+                <use xlink:href="./assets/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+          </nav><a class="lw-main-btn lw-main-btn--outlined lw-header__callback" href="tel:88005003343"><span>Позвонить</span>
+            <svg width="20" height="20">
+              <use xlink:href="./assets/sprite.svg#icon-phone"></use>
+            </svg></a>
+          <button class="lw-burger" type="button" aria-label="Открыть меню"><span class="lw-burger__line"></span><span class="lw-burger__line"></span><span class="lw-burger__line"></span></button>
+        </div>
+      </div>
     </header>
     <main>
       <section class="lw-section lw-about">
@@ -90,23 +122,23 @@
             <ul class="lw-features__list">
               <li class="lw-features__list-item">
                 <div class="lw-features__list-item-side"><img src="./assets/img/features-icon-1.png" alt="Укрепляют иммунитет" width="48" height="48"><span class="lw-features__list-item-title">Укрепляют иммунитет</span></div>
-                <div class="lw-features__list-item-side"><span class="lw-smaller-text">Влияя на все звенья иммунитета, нормализуют иммунный ответ как на бактериальные, так и на вирусные инфекции. На 30-50% снижают риск заболевания ОРВИ и ротавирусными инфекциями</span></div>
+                <div class="lw-features__list-item-side"><span class="lw-smaller-text lw-text-thin">Влияя на все звенья иммунитета, нормализуют иммунный ответ как на бактериальные, так и на вирусные инфекции. На 30-50% снижают риск заболевания ОРВИ и ротавирусными инфекциями</span></div>
               </li>
               <li class="lw-features__list-item">
                 <div class="lw-features__list-item-side"><img src="./assets/img/features-icon-2.png" alt="Улучшают пищеварение" width="46" height="37"><span class="lw-features__list-item-title">Улучшают пищеварение</span></div>
-                <div class="lw-features__list-item-side"><span class="lw-smaller-text">Нормализуют работу ЖКТ и устраняют неприятные симптомы синдрома раздражённого кишечника (диарея, запоры, метеоризм и т.д.)</span></div>
+                <div class="lw-features__list-item-side"><span class="lw-smaller-text lw-text-thin">Нормализуют работу ЖКТ и устраняют неприятные симптомы синдрома раздражённого кишечника (диарея, запоры, метеоризм и т.д.)</span></div>
               </li>
               <li class="lw-features__list-item">
                 <div class="lw-features__list-item-side"><img src="./assets/img/features-icon-3.png" alt="Выводят токсины" width="58" height="41"><span class="lw-features__list-item-title">Выводят токсины</span></div>
-                <div class="lw-features__list-item-side"><span class="lw-smaller-text">Разрушают токсины, снижая их концентрацию в крови и облегчают работу печени, убирают ощущение усталости и тяжести в правом подреберье</span></div>
+                <div class="lw-features__list-item-side"><span class="lw-smaller-text lw-text-thin">Разрушают токсины, снижая их концентрацию в крови и облегчают работу печени, убирают ощущение усталости и тяжести в правом подреберье</span></div>
               </li>
               <li class="lw-features__list-item">
                 <div class="lw-features__list-item-side"><img src="./assets/img/features-icon-4.png" alt="Устраняют аллергию" width="66" height="39"><span class="lw-features__list-item-title">Устраняют аллергию</span></div>
-                <div class="lw-features__list-item-side"><span class="lw-smaller-text">Снижают проницаемость кишечной стенки, препятствуют проникновению в кровь аллергенов, токсинов и патогенных бактерий. Снижают риск развития аутоиммунных заболеваний</span></div>
+                <div class="lw-features__list-item-side"><span class="lw-smaller-text lw-text-thin">Снижают проницаемость кишечной стенки, препятствуют проникновению в кровь аллергенов, токсинов и патогенных бактерий. Снижают риск развития аутоиммунных заболеваний</span></div>
               </li>
               <li class="lw-features__list-item">
                 <div class="lw-features__list-item-side"><img src="./assets/img/features-icon-5.png" alt="А также:" width="42" height="44"><span class="lw-features__list-item-title">А также:</span></div>
-                <div class="lw-features__list-item-side"><span class="lw-smaller-text">Снижают уровень сахара и холестерина в крови; помогают организму усваивать витамины и микроэлементы; способствует выработке витаминов и других веществ, полезных для здоровья; помогают в нормализации веса</span></div>
+                <div class="lw-features__list-item-side"><span class="lw-smaller-text lw-text-thin">Снижают уровень сахара и холестерина в крови; помогают организму усваивать витамины и микроэлементы; способствует выработке витаминов и других веществ, полезных для здоровья; помогают в нормализации веса</span></div>
               </li>
             </ul>
           </div>
@@ -121,10 +153,10 @@
             <div class="lw-comparison__content-side lw-comparison__content-side--left">
               <h2 class="lw-base-title"> Сравнение активности бифидобактерий</h2>
               <div class="lw-comparison__item"><span class="lw-comparison__item-title">Сухие:</span>
-                <p class="lw-secondary-text">Сухим бактериям требуются до 6-8 часов для активации, что не эффективно при частом стуле. При сушке бактерии впадают в глубокий анабиоз, из которого восстановиться могут только через 3-5 делений после попадания в благоприятную среду. В кишечнике среда часто неблагоприятная – это антибиотики, другие лекарства, также бактерии-конкуренты за питание. Не менее 8-10 часов в идеальной среде требуется сухим бактериям для перехода к активному состоянию. За это время они успевают выйти со стулом, так и не начав действовать</p>
+                <p class="lw-secondary-text lw-text-thin">Сухим бактериям требуются до 6-8 часов для активации, что не эффективно при частом стуле. При сушке бактерии впадают в глубокий анабиоз, из которого восстановиться могут только через 3-5 делений после попадания в благоприятную среду. В кишечнике среда часто неблагоприятная – это антибиотики, другие лекарства, также бактерии-конкуренты за питание. Не менее 8-10 часов в идеальной среде требуется сухим бактериям для перехода к активному состоянию. За это время они успевают выйти со стулом, так и не начав действовать</p>
               </div>
               <div class="lw-comparison__item"><span class="lw-comparison__item-title">Жидкие:</span>
-                <p class="lw-secondary-text">В отличие от сухих, в жидких пробиотиках бактерии постоянно находятся в активном состоянии. Главное достоинство жидких пробиотиков заключается в том, что бактерии в них находятся в живой биологически активной форме. Свое благотворное воздействие они оказывают незамедлительно — сразу после приема препарата, что выгодно отличает жидкие пробиотики от аналогичных сухих препаратов</p>
+                <p class="lw-secondary-text lw-text-thin">В отличие от сухих, в жидких пробиотиках бактерии постоянно находятся в активном состоянии. Главное достоинство жидких пробиотиков заключается в том, что бактерии в них находятся в живой биологически активной форме. Свое благотворное воздействие они оказывают незамедлительно — сразу после приема препарата, что выгодно отличает жидкие пробиотики от аналогичных сухих препаратов</p>
               </div>
             </div>
             <div class="lw-comparison__content-side lw-comparison__content-side--right">
