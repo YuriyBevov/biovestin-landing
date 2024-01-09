@@ -3439,6 +3439,9 @@ a {
 .lw-contacts__content .lw-base-text {
   margin-bottom: 60px;
 }
+.lw-contacts__content .lw-base-text strong {
+  font-weight: 500;
+}
 .lw-contacts__content-row {
   display: -webkit-box;
   display: -ms-flexbox;
