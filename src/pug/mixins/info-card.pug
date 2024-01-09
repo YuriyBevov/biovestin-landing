@@ -17,10 +17,10 @@ mixin info-card(data)
 
     .lw-info-card__content
       if data.title
-        span.lw-base-text!= data.title
+        span.lw-base-text.lw-text-bold!= data.title
 
       if data.text
-        span.lw-smaller-text!= data.text
+        span.lw-smaller-text.lw-text-thin!= data.text
 
       if data.linkUrl
         span.lw-secondary-text.lw-info-card__more!= data.linkTitle
