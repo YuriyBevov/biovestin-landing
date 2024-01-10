@@ -1,0 +1,34 @@
+include ../../mixins/main-btn
+include ../../mixins/preview-info-item
+
+section.lw-section.lw-preview
+  .lw-container.lw-preview__container
+    h2.lw-base-title Жидкие пробиотики «БИОВЕСТИН»
+
+    p.lw-base-text.lw-text-semi Тройной эффект для улучшения пищеварения:<br><span class="lw-text-thin">Пробиотик + Пребиотик + Метаболиты</span>
+
+    +main-btn({
+      type: 'button',
+      text: 'Заказать'
+    })
+
+    .lw-preview__note
+      span.lw-smaller-text Заказывайте у нас или в
+      img(src="./assets/img/eapteka-white.png" alt="EApteka" width="116" height="36")
+
+    +preview-info-item({
+      text: 'Пребиотик - <span class="lw-text-thin">ростовой<br>фактор для бактерий</span>',
+      cls: 'lw-preview-info-item--top'
+    })
+    +preview-info-item({
+      text: '<span class="lw-preview-info-item--mobile lw-text-thin">«Биовестин Лакто»<br></span>50% бифидобактерий +&nbsp50%&nbspлактобактерий',
+      cls: 'lw-preview-info-item--ltr lw-preview-info-item--right'
+    })
+    +preview-info-item({
+      text: '<span class="lw-preview-info-item--mobile lw-text-thin">«Биовестин»<br></span>100% бифидобактерий',
+      cls: 'lw-preview-info-item--ltr lw-preview-info-item--bottom'
+    })
+    +preview-info-item({
+      text: 'Не содержит консерванты<br>и красители',
+      cls: 'lw-preview-info-item--left'
+    })
