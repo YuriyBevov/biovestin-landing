@@ -7,23 +7,39 @@
 //-   linkUrl: String,
 //-   linkTitle: String,
 //-   linkIcon: Boolean,
-//-   linkPosition: String
 //- }
 
 mixin info-card(data)
-  a(href="index.html").lw-info-card
-    if data.imgPath
-      img(src= data.imgPath alt= data.title width="274" height="162")
+  if data.type == 'modal-trigger'
+    button(type="button" data-modal-anchor= data.modal).lw-info-card
+      if data.imgPath
+        img(src= data.imgPath alt= data.title width="274" height="162")
 
-    .lw-info-card__content
-      if data.title
-        span.lw-base-text.lw-text-bold!= data.title
+      .lw-info-card__content
+        if data.title
+          span.lw-base-text.lw-text-bold!= data.title
 
-      if data.text
-        span.lw-smaller-text.lw-text-thin!= data.text
+        if data.text
+          span.lw-smaller-text.lw-text-thin!= data.text
 
-      if data.linkUrl
-        span.lw-secondary-text.lw-info-card__more!= data.linkTitle
-          svg(width="10" height="10")
-            use(xlink:href="./assets/sprite.svg#icon-arrow")
+        if data.linkUrl
+          span.lw-secondary-text.lw-info-card__more!= data.linkTitle
+            svg(width="10" height="10")
+              use(xlink:href="./assets/sprite.svg#icon-arrow")
+  else
+    a(href="index.html").lw-info-card
+      if data.imgPath
+        img(src= data.imgPath alt= data.title width="274" height="162")
+
+      .lw-info-card__content
+        if data.title
+          span.lw-base-text.lw-text-bold!= data.title
+
+        if data.text
+          span.lw-smaller-text.lw-text-thin!= data.text
+
+        if data.linkUrl
+          span.lw-secondary-text.lw-info-card__more!= data.linkTitle
+            svg(width="10" height="10")
+              use(xlink:href="./assets/sprite.svg#icon-arrow")
 

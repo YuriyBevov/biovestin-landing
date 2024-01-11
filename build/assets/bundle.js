@@ -1,6 +1,176 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/scripts/classes/Modal.js":
+/*!**************************************!*\
+  !*** ./src/scripts/classes/Modal.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Modal": () => (/* binding */ Modal)
+/* harmony export */ });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+// import { gsap } from 'gsap';
+var Modal = /*#__PURE__*/function () {
+  function Modal(modal) {
+    var _this = this;
+
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+    _classCallCheck(this, Modal);
+
+    _defineProperty(this, "bodyLocker", function (bool) {
+      var body = document.querySelector("body");
+
+      if (bool) {
+        body.style.overflow = "hidden";
+      } else {
+        body.style.overflow = "auto";
+      }
+    });
+
+    _defineProperty(this, "focusTrap", function () {
+      var firstFocusableElement = _this.modal.querySelectorAll(_this.focusableElements)[0];
+
+      var focusableContent = _this.modal.querySelectorAll(_this.focusableElements);
+
+      var lastFocusableElement = focusableContent[focusableContent.length - 1];
+
+      if (focusableContent.length) {
+        var onBtnClickHandler = function onBtnClickHandler(evt) {
+          var isTabPressed = evt.key === "Tab" || evt.key === 9;
+
+          if (evt.key === "Escape") {
+            document.removeEventListener("keydown", onBtnClickHandler);
+          }
+
+          if (!isTabPressed) {
+            return;
+          }
+
+          if (evt.shiftKey) {
+            if (document.activeElement === firstFocusableElement) {
+              lastFocusableElement.focus();
+              evt.preventDefault();
+            }
+          } else {
+            if (document.activeElement === lastFocusableElement) {
+              firstFocusableElement.focus();
+              evt.preventDefault();
+            }
+          }
+        };
+
+        document.addEventListener("keydown", onBtnClickHandler);
+        firstFocusableElement.focus();
+      }
+    });
+
+    _defineProperty(this, "addListeners", function () {
+      if (_this.openers) {
+        _this.openers.forEach(function (opener) {
+          opener.removeEventListener("click", _this.openModal);
+        });
+      }
+
+      document.addEventListener("click", _this.closeByOverlayClick);
+      document.addEventListener("keydown", _this.closeByEscBtn);
+
+      if (_this.close) {
+        _this.close.addEventListener("click", _this.closeByBtnClick);
+      }
+    });
+
+    _defineProperty(this, "refresh", function () {
+      document.removeEventListener("click", _this.closeByOverlayClick);
+      document.removeEventListener("keydown", _this.closeByEscBtn);
+      console.log("refresh");
+
+      if (_this.close) {
+        _this.close.removeEventListener("click", _this.closeByBtnClick);
+      }
+
+      _this.modal.classList.remove("active");
+
+      !_this.preventBodyLock ? _this.bodyLocker(false) : null;
+      _this.preventBodyLock = false;
+
+      if (_this.openers) {
+        _this.openers.forEach(function (opener) {
+          opener.addEventListener("click", _this.openModal);
+        });
+      }
+    });
+
+    _defineProperty(this, "closeByOverlayClick", function (evt) {
+      if (evt.target === _this.overlay) {
+        _this.refresh();
+      }
+    });
+
+    _defineProperty(this, "closeByEscBtn", function (evt) {
+      if (evt.key === "Escape") {
+        _this.refresh();
+      }
+    });
+
+    _defineProperty(this, "closeByBtnClick", function () {
+      _this.refresh();
+    });
+
+    _defineProperty(this, "openModal", function (evt) {
+      evt.preventDefault();
+
+      _this.bodyLocker(true);
+
+      _this.modal.classList.add("active");
+
+      _this.addListeners();
+    });
+
+    this.preventBodyLock = options.preventBodyLock ? true : false, this.modal = modal;
+    this.overlay = this.modal.querySelector(".lw-modal-overlay");
+    this.content = this.modal.querySelector(".lw-modal-body");
+    this.close = this.modal.querySelector(".lw-modal-closer");
+    this.id = this.modal.getAttribute("id");
+    this.openers = document.querySelectorAll('[data-modal-anchor="' + this.id + '"]');
+    this.isInited = false;
+    this.focusableElements = ["a[href]", "input", "select", "textarea", "button", "iframe", "[contenteditable]", '[tabindex]:not([tabindex^="-"])'];
+    this.init();
+  }
+
+  _createClass(Modal, [{
+    key: "init",
+    value: function init() {
+      var _this2 = this;
+
+      if (this.openers) {
+        this.isInited = true;
+        this.openers.forEach(function (opener) {
+          opener.addEventListener("click", _this2.openModal);
+        });
+        console.log(this.overlay, this.modal, this.close);
+      } else {
+        console.error("Не добавлена кнопка открытия модального окна, либо в ней не прописан аттр-т: data-modal-anchor={modal-id} ");
+      }
+    }
+  }]);
+
+  return Modal;
+}();
+
+/***/ }),
+
 /***/ "./src/scripts/modules/headerTop.js":
 /*!******************************************!*\
   !*** ./src/scripts/modules/headerTop.js ***!
@@ -13,6 +183,27 @@ if (headerTop) {
   var closer = headerTop.querySelector(".lw-header__top-closer");
   closer.addEventListener("click", function () {
     headerTop.style.display = "none";
+  });
+}
+
+/***/ }),
+
+/***/ "./src/scripts/modules/modal.js":
+/*!**************************************!*\
+  !*** ./src/scripts/modules/modal.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _classes_Modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../classes/Modal */ "./src/scripts/classes/Modal.js");
+
+var modals = document.querySelectorAll(".lw-modal");
+
+if (modals) {
+  console.log(modals);
+  modals.forEach(function (modal) {
+    new _classes_Modal__WEBPACK_IMPORTED_MODULE_0__.Modal(modal);
   });
 }
 
@@ -13168,7 +13359,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/nav */ "./src/scripts/modules/nav.js");
 /* harmony import */ var _modules_nav__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_nav__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _modules_swiper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/swiper */ "./src/scripts/modules/swiper.js");
+/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/modal */ "./src/scripts/modules/modal.js");
 //import ./modules/test;
+
 
 
 

@@ -1,0 +1,12 @@
+mixin about-modal-tpl(data)
+  .lw-modal(id= data.id)
+    .lw-modal-overlay
+      .lw-modal-body.lw-about-modal-body
+        button(type="button").lw-modal-closer.lw-about-modal-closer
+          svg(width="38" height="38")
+            use(xlink:href="./assets/sprite.svg#icon-close")
+        img(src=`./assets/img/${data.imgPath}.png` alt= data.title width="440" height="370")
+
+        .lw-modal-content
+          span.lw-base-title!= data.title
+          .lw-modal-content__main.lw-secondary-text!= data.content
