@@ -11,7 +11,7 @@
 
 mixin info-card(data)
   if data.type == 'modal-trigger'
-    button(type="button" data-modal-anchor= data.modal).lw-info-card
+    div(data-modal-anchor= data.modal).lw-info-card
       if data.imgPath
         img(src= data.imgPath alt= data.title width="274" height="162")
 

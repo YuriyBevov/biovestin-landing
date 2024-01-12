@@ -43,7 +43,7 @@ mixin product-card(data)
 
     ul.lw-product-card__chars
       each item in data.chars
-        .lw-product-card__chars-item
+        li.lw-product-card__chars-item
           img(src=`./assets/img/${item.icon}-icon.svg` alt!=item.name width="18" height="18").lw-product-card__chars-item-icon
 
           .lw-product-card__chars-item-content

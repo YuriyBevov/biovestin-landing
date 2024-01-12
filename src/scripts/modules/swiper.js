@@ -37,10 +37,5 @@ if (pressSlider) {
   new Swiper(pressSlider, {
     slidesPerView: "auto",
     spaceBetween: 20,
-
-    pagination: {
-      el: ".lw-company__top-gallery .swiper-pagination",
-      dynamicBullets: true,
-    },
   });
 }
