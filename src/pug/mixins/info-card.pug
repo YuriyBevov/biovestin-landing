@@ -27,7 +27,7 @@ mixin info-card(data)
             svg(width="10" height="10")
               use(xlink:href="./assets/sprite.svg#icon-arrow")
   else
-    a(href="index.html").lw-info-card
+    a(href= data.linkUrl target="_blank").lw-info-card
       if data.imgPath
         img(src= data.imgPath alt= data.title width="274" height="162")
 
