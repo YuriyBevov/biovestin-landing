@@ -1,15 +1,23 @@
 .lw-preview {
   padding: 60px 0;
   background-color: var(--basic-green);
-  background-image: url("../assets/img/preview-bg.png");
+  background-image: url("../assets/img/preview-bg.webp");
   background-size: cover;
   background-position: center;
   min-height: 500px;
 
+  &.no-webp {
+    background-image: url("../assets/img/preview-bg.jpg");
+  }
+
   @media (max-width: 960px) {
-    background-image: url("../assets/img/preview-bg-mobile.png");
+    background-image: url("../assets/img/preview-bg-mobile.webp");
     background-position: center;
     min-height: 800px;
+
+    &.no-webp {
+      background-image: url("../assets/img/preview-bg-mobile.jpg");
+    }
   }
 
   &__container {

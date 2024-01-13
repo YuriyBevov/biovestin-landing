@@ -7,9 +7,13 @@
     grid-gap: 20px;
 
     padding: 50px 30px;
-    background-image: url("../assets/img/callback-bg.png");
+    background-image: url("../assets/img/callback-bg.webp");
     background-size: cover;
     background-position: center;
+
+    &.no-webp {
+      background-image: url("../assets/img/callback-bg.png");
+    }
 
     @media (max-width: 1024px) {
       grid-template-columns: repeat(2, 1fr);

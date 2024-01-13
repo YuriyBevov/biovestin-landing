@@ -1,13 +1,21 @@
 .lw-features {
   padding-top: 120px;
-  background-image: url("../assets/img/features-bg.png");
+  background-image: url("../assets/img/features-bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
 
+  &.no-webp {
+    background-image: url("../assets/img/features-bg.png");
+  }
+
   @media (max-width: 1024px) {
-    background-image: url("../assets/img/features-bg-mobile.png");
+    background-image: url("../assets/img/features-bg-mobile.webp");
     background-position: bottom;
+
+    &.no-webp {
+      background-image: url("../assets/img/features-bg-mobile.png");
+    }
   }
 
   @media (max-width: 534px) {

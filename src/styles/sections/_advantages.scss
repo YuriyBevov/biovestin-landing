@@ -5,15 +5,23 @@
     position: relative;
     padding: 50px 30px;
     min-height: 502px;
-    background-image: url("../assets/img/advantages-bg.png");
+    background-image: url("../assets/img/advantages-bg.webp");
     background-size: cover;
     background-position: center;
     overflow: hidden;
 
+    &.no-webp {
+      background-image: url("../assets/img/advantages-bg.png");
+    }
+
     @media (max-width: 960px) {
       min-height: 1700px;
-      background-image: url("../assets/img/advantages-bg-mobile.png");
+      background-image: url("../assets/img/advantages-bg-mobile.webp");
       background-position: bottom;
+
+      &.no-webp {
+        background-image: url("../assets/img/advantages-bg-mobile.png");
+      }
     }
 
     @media (max-width: 860px) {

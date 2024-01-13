@@ -4,7 +4,6 @@ const burger = document.querySelector(".lw-burger");
 if (nav && burger) {
   const links = nav.querySelectorAll(".lw-main-nav__list-item a");
 
-  console.log(links);
   const closer = nav.querySelector(".lw-main-nav__closer");
   const openNav = () => {
     nav.classList.add("lw-main-nav--active");
