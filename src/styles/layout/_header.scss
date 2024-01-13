@@ -98,7 +98,12 @@
       align-items: center;
       border-radius: 50px;
       border: none;
-      background: linear-gradient(91deg, #f9ad2e 0%, #f28700 100%);
+      // background: linear-gradient(91deg, #f9ad2e 0%, #f28700 100%);
+      background-image: url("../assets/img/icon-phone.svg");
+      background-size: 20px;
+      background-repeat: no-repeat;
+      background-color: var(--warning);
+      background-position: center;
 
       span {
         display: none;

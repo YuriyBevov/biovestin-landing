@@ -95,7 +95,7 @@ export class Modal {
   refresh = () => {
     document.removeEventListener("click", this.closeByOverlayClick);
     document.removeEventListener("keydown", this.closeByEscBtn);
-    console.log("refresh");
+
     if (this.close) {
       this.close.removeEventListener("click", this.closeByBtnClick);
     }
@@ -145,7 +145,6 @@ export class Modal {
       this.openers.forEach((opener) => {
         opener.addEventListener("click", this.openModal);
       });
-      console.log(this.overlay, this.modal, this.close);
     } else {
       console.error(
         "Не добавлена кнопка открытия модального окна, либо в ней не прописан аттр-т: data-modal-anchor={modal-id} "

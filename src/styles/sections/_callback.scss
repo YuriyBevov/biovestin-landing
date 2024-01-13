@@ -48,6 +48,29 @@
       display: flex;
       align-items: center;
       margin-bottom: 10px;
+      position: relative;
+      padding-left: 28px;
+
+      &::before {
+        position: absolute;
+
+        left: 0;
+        content: "";
+        width: 18px;
+        height: 18px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      &--worktime::before {
+        top: -2px;
+        background-image: url("../assets/img/icon-clock.svg");
+      }
+
+      &--phone::before {
+        top: 0;
+        background-image: url("../assets/img/icon-phone.svg");
+      }
 
       svg {
         width: 100%;

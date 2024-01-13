@@ -1,6 +1,7 @@
 .lw-main-nav {
   flex-grow: 1;
   padding: 0 20px;
+  overflow-x: hidden;
 
   &__closer {
     display: none;
