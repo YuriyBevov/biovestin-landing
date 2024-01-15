@@ -71,9 +71,15 @@
         background-image: url("../assets/img/icon-clock.svg");
       }
 
-      &--phone::before {
-        top: 0;
-        background-image: url("../assets/img/icon-phone.svg");
+      &--phone {
+        .lw-secondary-text {
+          font-weight: 500;
+        }
+
+        &::before {
+          top: 0;
+          background-image: url("../assets/img/icon-phone.svg");
+        }
       }
 
       svg {

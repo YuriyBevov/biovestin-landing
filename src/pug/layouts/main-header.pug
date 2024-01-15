@@ -1,13 +1,10 @@
 header.lw-header
   .lw-header__top
     .lw-container
-      span.lw-smaller-text.lw-header__top-info Официальный сайт производителя
-      span.lw-smaller-text.lw-header__top-phone Консультация врача: <b>+ 7 (800) 500-33-43</b>,
-      span.lw-smaller-text.lw-header__top-worktime ежедневно с 5:00 до 20:00 Мск. <b>Звонок бесплатный</b>
+      span.lw-secondary-text.lw-header__top-info Официальный сайт производителя
+      span.lw-secondary-text.lw-header__top-phone Консультация врача: <b>+ 7 (800) 500-33-43</b>,
+      span.lw-secondary-text.lw-header__top-worktime ежедневно с 5:00 до 20:00 Мск. <b>Звонок бесплатный</b>
 
-      button.lw-header__top-closer
-        svg(width="12" height="12")
-          use(xlink:href="./assets/sprite.svg#icon-close")
   .lw-header__bottom
     .lw-container
       include ../components/main-logo
@@ -15,6 +12,7 @@ header.lw-header
 
       a(href="tel:88005003343").lw-main-btn.lw-main-btn--outlined.lw-header__callback
         span Позвонить
+      <button class="lw-main-btn lw-header__offer-btn" type="button" data-action="open-popup" data-popup="order-popup">Заказать</button>
 
       button(type="button" aria-label="Открыть меню").lw-burger
         span.lw-burger__line

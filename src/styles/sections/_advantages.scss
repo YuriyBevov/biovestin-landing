@@ -62,11 +62,11 @@
 
     &::after {
       width: 50%;
-      left: 451px;
+      left: 433px;
       background-image: url("../assets/img/advantages-ellipse-right.png");
 
       @media (max-width: 1140px) {
-        left: 419px;
+        left: 403px;
       }
     }
   }
@@ -89,7 +89,7 @@
   &__list {
     @extend .list-reset;
     column-count: 2;
-    column-gap: 70px;
+    column-gap: 30px;
     max-width: 760px;
     position: relative;
     z-index: 3;

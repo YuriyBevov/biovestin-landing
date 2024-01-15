@@ -76,9 +76,10 @@
   &__list-item {
     a {
       @extend .lw-smaller-text;
-      padding: 15px;
-      font-size: 12px;
-      font-weight: 300;
+      padding: 15px 5px;
+      font-size: 14px;
+      font-weight: 400;
+      text-decoration: underline;
 
       @media (max-width: 1140px) {
         font-size: 16px;
