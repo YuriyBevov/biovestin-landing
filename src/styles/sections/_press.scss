@@ -1,6 +1,10 @@
 .lw-press {
   padding: 120px 0;
 
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+
   .swiper-slide {
     width: 270px;
     height: auto;

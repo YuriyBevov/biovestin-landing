@@ -1,6 +1,10 @@
 .lw-callback {
   padding: 120px 0 60px;
 
+  @media (max-width: 768px) {
+    padding: 60px 0 30px;
+  }
+
   &__wrapper {
     display: grid;
     grid-template-columns: 430px auto;

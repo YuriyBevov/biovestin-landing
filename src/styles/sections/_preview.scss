@@ -120,13 +120,19 @@
   min-width: 182px;
   max-width: 235px;
   min-height: 46px;
-  padding: 10px;
-  padding-left: 50px;
+  padding: 4px;
+  padding-left: 46px;
   border-radius: 2px;
   background: rgba(255, 255, 255, 0.74);
 
   .lw-smaller-text {
     color: var(--main-text-color);
+  }
+
+  .lw-secondary-text {
+    @media (max-width: 359px) {
+      font-size: 10px;
+    }
   }
 
   &::before {

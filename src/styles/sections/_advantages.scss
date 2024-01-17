@@ -1,6 +1,10 @@
 .lw-advantages {
   padding: 120px 0 30px;
 
+  @media (max-width: 768px) {
+    padding: 60px 0 15px;
+  }
+
   &__wrapper {
     position: relative;
     padding: 50px 30px;

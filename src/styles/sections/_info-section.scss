@@ -11,12 +11,28 @@
     .lw-container {
       min-height: 1200px;
 
-      @media (max-width: 768px) {
+      @media (max-width: 1140px) {
+        min-height: 1260px;
+      }
+
+      @media (max-width: 1000px) {
+        min-height: 1140px;
+      }
+
+      @media (max-width: 860px) {
         min-height: 1000px;
       }
 
-      @media (max-width: 620px) {
-        min-height: 800px;
+      @media (max-width: 768px) {
+        min-height: 900px;
+      }
+
+      @media (max-width: 600px) {
+        min-height: 820px;
+      }
+
+      @media (max-width: 400px) {
+        min-height: 620px;
       }
     }
   }
