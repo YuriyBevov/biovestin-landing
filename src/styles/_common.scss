@@ -126,15 +126,19 @@
 
     border-radius: 2px;
     border: 1px solid var(--white);
-    background: linear-gradient(91deg, #f9ad2e 0%, #f28700 100%);
+    // background: linear-gradient(91deg, #f9ad2e 0%, #f28700 100%);
+    background-color: var(--warning);
 
     color: var(--white);
+    &:not(.lw-main-btn--outlined):not(.lw-main-btn--secondary) {
+      @extend .clear-bg-by-hover;
+    }
 
     &--outlined {
-      // border: 1px solid var(--basic-green);
       background: none;
-      // color: var(--main-text-color);
       background-color: transparent;
+
+      @extend .fill-bg-on-hover;
     }
 
     &--secondary {

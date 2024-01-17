@@ -22,34 +22,34 @@
   }
 
   &--top {
-    background-image: url("../assets/img/info-section-bg-1.webp");
+    background-image: url("../assets/img/info-section-bg-1.jpg");
 
-    &.no-webp {
-      background-image: url("../assets/img/info-section-bg-1.jpg");
-    }
+    // &.no-webp {
+    //   background-image: url("../assets/img/info-section-bg-1.jpg");
+    // }
 
     @media (max-width: 1140px) {
-      background-image: url("../assets/img/info-section-bg-mobile-1.webp");
+      background-image: url("../assets/img/info-section-bg-mobile-1.jpg");
 
-      &.no-webp {
-        background-image: url("../assets/img/info-section-bg-mobile-1.jpg");
-      }
+      // &.no-webp {
+      //   background-image: url("../assets/img/info-section-bg-mobile-1.jpg");
+      // }
     }
   }
 
   &--bottom {
-    background-image: url("../assets/img/info-section-bg-2.webp");
+    background-image: url("../assets/img/info-section-bg-2.jpg");
 
-    &.no-webp {
-      background-image: url("../assets/img/info-section-bg-2.jpg");
-    }
+    // &.no-webp {
+    //   background-image: url("../assets/img/info-section-bg-2.jpg");
+    // }
 
     @media (max-width: 1140px) {
-      background-image: url("../assets/img/info-section-bg-mobile-2.webp");
+      background-image: url("../assets/img/info-section-bg-mobile-2.jpg");
 
-      &.no-webp {
-        background-image: url("../assets/img/info-section-bg-mobile-2.jpg");
-      }
+      // &.no-webp {
+      //   background-image: url("../assets/img/info-section-bg-mobile-2.jpg");
+      // }
     }
 
     .lw-info-section__content {

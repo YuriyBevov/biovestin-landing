@@ -1,6 +1,6 @@
 .lw-features {
   padding-top: 30px;
-  background-image: url("../assets/img/features-bg.webp");
+  background-image: url("../assets/img/features-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
@@ -9,17 +9,17 @@
     padding-top: 120px;
   }
 
-  &.no-webp {
-    background-image: url("../assets/img/features-bg.png");
-  }
+  // &.no-webp {
+  //   background-image: url("../assets/img/features-bg.png");
+  // }
 
   @media (max-width: 1024px) {
-    background-image: url("../assets/img/features-bg-mobile.webp");
+    background-image: url("../assets/img/features-bg-mobile.png");
     background-position: bottom;
 
-    &.no-webp {
-      background-image: url("../assets/img/features-bg-mobile.png");
-    }
+    // &.no-webp {
+    //   background-image: url("../assets/img/features-bg-mobile.png");
+    // }
   }
 
   @media (max-width: 534px) {

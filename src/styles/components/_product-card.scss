@@ -67,8 +67,23 @@
       font-weight: 500;
       line-height: 1;
       padding: 5px 10px;
-      border: none;
+      border-color: transparent;
       max-width: 156px;
+
+      &.lw-main-btn--outlined:hover,
+      &.lw-main-btn--outlined:focus {
+        border-color: var(--warning);
+        background: transparent;
+        color: var(--warning);
+      }
+
+      &:not(.lw-main-btn--outlined) {
+        &:hover,
+        &:focus {
+          border-color: var(--warning);
+          color: var(--warning);
+        }
+      }
     }
 
     &--top {

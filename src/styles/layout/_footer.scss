@@ -68,6 +68,8 @@
         justify-content: flex-start;
         font-size: 14px;
       }
+
+      @extend .colored-on-hover;
     }
 
     @media (max-width: 1040px) {

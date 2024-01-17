@@ -84,6 +84,8 @@
       @media (max-width: 1140px) {
         font-size: 16px;
       }
+
+      @extend .colored-on-hover;
     }
   }
 }

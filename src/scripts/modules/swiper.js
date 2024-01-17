@@ -1,5 +1,5 @@
-import Swiper, { Navigation, Pagination } from "swiper";
-Swiper.use([Navigation, Pagination]);
+import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
+Swiper.use([Navigation, Pagination, Autoplay]);
 
 const companySlider = document.querySelector(
   ".lw-company__top-gallery .swiper"
@@ -9,6 +9,9 @@ if (companySlider) {
   new Swiper(companySlider, {
     slidesPerView: "auto",
     spaceBetween: 10,
+    autoplay: {
+      delay: 3000,
+    },
 
     pagination: {
       el: ".lw-company__top-gallery .swiper-pagination",
