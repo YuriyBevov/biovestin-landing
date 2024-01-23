@@ -70,7 +70,7 @@
 
   &__list-item {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2fr 3fr;
     grid-gap: 20px;
     padding: 10px 0;
     border-top: 1px solid #b2bbc5;
@@ -82,7 +82,7 @@
       border: none;
 
       &-title,
-      .lw-smaller-text {
+      .lw-secondary-text {
         text-align: center;
       }
     }
@@ -99,9 +99,9 @@
       img {
         object-fit: contain;
         width: 100%;
-        max-width: 50px;
+        max-width: 48px;
         height: auto;
-        max-height: 40px;
+        max-height: 48px;
         margin-right: 5px;
 
         @media (max-width: 1024px) {
@@ -113,13 +113,12 @@
     }
 
     &-title {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 500;
-      // flex-grow: 1;
-    }
 
-    .lw-smaller-text {
-      // flex-grow: 1;
+      @include m-b-down(1140px) {
+        font-size: 16px;
+      }
     }
   }
 }

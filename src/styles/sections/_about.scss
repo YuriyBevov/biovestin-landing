@@ -36,8 +36,11 @@
     &--content {
       grid-column: 3/5;
 
-      .lw-secondary-text span {
-        font-weight: 600;
+      .lw-base-text {
+        font-weight: 300;
+        span {
+          font-weight: 500;
+        }
       }
     }
 
@@ -130,6 +133,7 @@
 
           &:last-child {
             max-width: 200px;
+            font-weight: 300;
             color: var(--light-color);
 
             &::after {

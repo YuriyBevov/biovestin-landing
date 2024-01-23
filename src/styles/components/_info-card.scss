@@ -44,6 +44,11 @@
     height: 100%;
   }
 
+  &__text {
+    @extend .lw-smaller-text;
+    font-size: 14px;
+  }
+
   .lw-secondary-text {
     margin-top: auto;
     padding-top: 20px;
@@ -52,7 +57,7 @@
     svg {
       width: 10px;
       height: 10px;
-      fill: var(--success);
+      fill: var(--green);
       margin-left: 5px;
       transition: fill var(--main-transition);
     }

@@ -93,19 +93,23 @@
       }
     }
 
-    .lw-secondary-text {
+    .button-row:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    .lw-base-text:first-of-type {
       margin-bottom: 30px;
 
       @media (max-width: 1140px) {
         text-align: center;
       }
+
+      @media (max-width: 534px) {
+        font-size: 14px;
+      }
     }
 
-    .button-row:not(:last-child) {
-      margin-bottom: 40px;
-    }
-
-    .lw-base-text {
+    .lw-base-text:last-of-type {
       margin-bottom: 30px;
 
       @media (max-width: 1140px) {
